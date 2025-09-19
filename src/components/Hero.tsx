@@ -1,12 +1,12 @@
-import { ArrowDown, FileText, Mail } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import tiaraPortrait from '@/assets/tiara-portrait.jpg';
+import { ArrowDown, FileText, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import tiaraPortrait from "@/assets/INIH.jpg";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -28,31 +28,24 @@ const Hero = () => {
               </h1>
               <div className="section-divider ml-0"></div>
               <p className="text-xl text-muted-foreground font-inter leading-relaxed">
-                Innovative Interior Design Student at Institut Teknologi Nasional, 
-                transforming spaces through creative vision and technical excellence.
+                Innovative Interior Design Student at Institut Teknologi Nasional, transforming spaces through creative vision and technical
+                excellence.
               </p>
             </div>
 
             <div className="space-y-6">
               <p className="text-lg text-foreground font-inter">
-                Passionate about creating harmonious environments that blend aesthetics 
-                with functionality, bringing dreams to life through thoughtful design.
+                Passionate about creating harmonious environments that blend aesthetics with functionality, bringing dreams to life through thoughtful
+                design.
               </p>
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  onClick={() => scrollToSection('projects')}
-                  className="btn-hero group"
-                >
+                <Button onClick={() => scrollToSection("projects")} className="btn-hero group">
                   <FileText className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
                   View Projects
                 </Button>
-                <Button
-                  onClick={() => scrollToSection('contact')}
-                  variant="outline"
-                  className="btn-outline"
-                >
+                <Button onClick={() => scrollToSection("contact")} variant="outline" className="btn-outline">
                   <Mail className="mr-2 h-5 w-5" />
                   Get In Touch
                 </Button>
@@ -61,15 +54,10 @@ const Hero = () => {
 
             {/* Skills Preview */}
             <div className="pt-8">
-              <p className="text-sm text-muted-foreground font-inter mb-4">
-                TECHNICAL EXPERTISE
-              </p>
+              <p className="text-sm text-muted-foreground font-inter mb-4">TECHNICAL EXPERTISE</p>
               <div className="flex flex-wrap gap-3">
-                {['AutoCAD', 'SketchUp', '3ds Max', 'Revit', 'Photoshop', 'Lumion'].map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-inter font-medium"
-                  >
+                {["AutoCAD", "SketchUp", "3ds Max", "Revit", "Photoshop", "Lumion"].map((skill) => (
+                  <span key={skill} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-inter font-medium">
                     {skill}
                   </span>
                 ))}
@@ -82,15 +70,11 @@ const Hero = () => {
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl blur-2xl animate-glow"></div>
               <div className="relative bg-card rounded-2xl p-2 shadow-2xl">
-                <img
-                  src={tiaraPortrait}
-                  alt="Tiara Shalma a Sakhra - Interior Design Student"
-                  className="w-full h-[600px] object-cover rounded-xl"
-                />
+                <img src={tiaraPortrait} alt="Tiara Shalma a Sakhra - Interior Design Student" className="w-full h-[600px] object-cover rounded-xl" />
               </div>
               {/* Floating elements */}
               <div className="absolute -top-4 -right-4 w-20 h-20 bg-primary/20 rounded-full animate-float"></div>
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-accent/20 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
+              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-accent/20 rounded-full animate-float" style={{ animationDelay: "1s" }}></div>
             </div>
           </div>
         </div>

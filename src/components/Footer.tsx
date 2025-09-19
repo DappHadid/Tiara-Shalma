@@ -1,4 +1,4 @@
-import { Instagram, Mail, Heart } from 'lucide-react';
+import { Instagram, Mail, Heart } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -7,42 +7,24 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 items-center">
           {/* Brand */}
           <div className="text-center md:text-left">
-            <h3 className="text-2xl font-playfair font-bold mb-2">
-              Tiara Shalma a Sakhra
-            </h3>
-            <p className="text-white/80 font-inter">
-              Interior Design Student
-            </p>
-            <p className="text-white/60 font-inter text-sm">
-              Institut Teknologi Nasional
-            </p>
+            <h3 className="text-2xl font-playfair font-bold mb-2">Tiara Shalma a Sakhra</h3>
+            <p className="text-white/80 font-inter">Interior Design Student</p>
+            <p className="text-white/60 font-inter text-sm">Institut Teknologi Nasional</p>
           </div>
 
           {/* Quick Links */}
           <div className="text-center">
             <div className="flex justify-center space-x-8">
-              <a
-                href="#home"
-                className="contact-link text-white hover:text-deep-red"
-              >
+              <a href="#home" className="contact-link text-white hover:text-deep-red">
                 Home
               </a>
-              <a
-                href="#about"
-                className="contact-link text-white hover:text-deep-red"
-              >
+              <a href="#about" className="contact-link text-white hover:text-deep-red">
                 About
               </a>
-              <a
-                href="#projects"
-                className="contact-link text-white hover:text-deep-red"
-              >
+              <a href="#projects" className="contact-link text-white hover:text-deep-red">
                 Projects
               </a>
-              <a
-                href="#contact"
-                className="contact-link text-white hover:text-deep-red"
-              >
+              <a href="#contact" className="contact-link text-white hover:text-deep-red">
                 Contact
               </a>
             </div>
@@ -68,18 +50,16 @@ const Footer = () => {
                 <Mail className="h-5 w-5" />
               </a>
             </div>
-            <p className="text-white/60 font-inter text-sm">
-              Let's create something beautiful together
-            </p>
+            <p className="text-white/60 font-inter text-sm">Let's create something beautiful together</p>
           </div>
         </div>
 
         {/* Bottom Section */}
         <div className="mt-8 pt-8 border-t border-white/20 text-center">
           <p className="text-white/60 font-inter text-sm flex items-center justify-center">
-            © 2024 Tiara Shalma a Sakhra. Made with 
+            © 2024 Tiara Shalma a Sakhra. Made with
             <Heart className="h-4 w-4 mx-1 text-deep-red fill-current" />
-            for great design.
+            by appa yip yip
           </p>
         </div>
       </div>
