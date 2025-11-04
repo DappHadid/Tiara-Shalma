@@ -1,6 +1,6 @@
 import { ArrowDown, FileText, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import tiaraPortrait from "@/assets/INIH.jpg";
+import tiaraPortrait from "@/assets/photoprofile.jpg";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -24,19 +24,19 @@ const Hero = () => {
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-7xl font-playfair font-bold text-foreground leading-tight">
                 Tiara Shalma
-                <span className="text-primary block">a Sakhra</span>
+                <span className="text-primary block">A Sakhra</span>
               </h1>
               <div className="section-divider ml-0"></div>
               <p className="text-xl text-muted-foreground font-inter leading-relaxed">
-                Innovative Interior Design Student at Institut Teknologi Nasional, transforming spaces through creative vision and technical
-                excellence.
+                Innovative Interior Design student at Institut Teknologi Nasional Bandung, dedicated to transforming spaces through creative vision
+                and technical expertise.
               </p>
             </div>
 
             <div className="space-y-6">
               <p className="text-lg text-foreground font-inter">
-                Passionate about creating harmonious environments that blend aesthetics with functionality, bringing dreams to life through thoughtful
-                design.
+                Passionate about designing harmonious environments that balance aesthetics and functionality, bringing ideas to life with thoughtful
+                and impactful design.
               </p>
 
               {/* CTA Buttons */}
@@ -53,7 +53,7 @@ const Hero = () => {
             </div>
 
             {/* Skills Preview */}
-            <div className="pt-8">
+            {/* <div className="pt-8">
               <p className="text-sm text-muted-foreground font-inter mb-4">TECHNICAL EXPERTISE</p>
               <div className="flex flex-wrap gap-3">
                 {["AutoCAD", "SketchUp", "3ds Max", "Revit", "Photoshop", "Lumion"].map((skill) => (
@@ -62,7 +62,7 @@ const Hero = () => {
                   </span>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Right Content - Image */}

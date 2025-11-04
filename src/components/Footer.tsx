@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 items-center">
           {/* Brand */}
           <div className="text-center md:text-left">
-            <h3 className="text-2xl font-playfair font-bold mb-2">Tiara Shalma a Sakhra</h3>
+            <h3 className="text-2xl font-playfair font-bold mb-2">Tiara Shalma A Sakhra</h3>
             <p className="text-white/80 font-inter">Interior Design Student</p>
             <p className="text-white/60 font-inter text-sm">Institut Teknologi Nasional</p>
           </div>

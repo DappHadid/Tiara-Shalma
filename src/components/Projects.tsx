@@ -61,8 +61,7 @@ const Projects = () => {
           <h2 className="text-4xl lg:text-5xl font-playfair font-bold text-foreground mb-6">My Projects</h2>
           <div className="section-divider mb-8"></div>
           <p className="text-xl text-muted-foreground font-inter max-w-3xl mx-auto leading-relaxed">
-            A curated collection of my interior design work, showcasing technical proficiency and creative problem-solving across various project
-            types and scales.
+            A collection of projects highlighting design concepts, working drawings, and final renderings.
           </p>
         </div>
 
