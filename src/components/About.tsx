@@ -48,10 +48,10 @@ const About = () => {
       name: "Capcut",
       logo: capcut,
     },
-    {
-      name: "Fall in love with Appa",
-      logo: appa,
-    },
+    // {
+    //   name: "Fall in love with Appa",
+    //   logo: appa,
+    // },
   ];
 
   const highlights = [

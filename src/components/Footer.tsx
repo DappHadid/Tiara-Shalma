@@ -59,7 +59,7 @@ const Footer = () => {
           <p className="text-white/60 font-inter text-sm flex items-center justify-center">
             © 2024 Tiara Shalma a Sakhra. Made with
             <Heart className="h-4 w-4 mx-1 text-deep-red fill-current" />
-            by appa yip yip
+            by Grove
           </p>
         </div>
       </div>

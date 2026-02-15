@@ -20,12 +20,12 @@ const Contact = () => {
       value: "Institut Teknologi Nasional",
       link: null,
     },
-    {
-      icon: <Heart className="h-6 w-6" />,
-      label: "Status",
-      value: "i'am taken >_<",
-      link: null,
-    },
+    // {
+    //   icon: <Heart className="h-6 w-6" />,
+    //   label: "Status",
+    //   value: "i'am taken >_<",
+    //   link: null,
+    // },
   ];
 
   return (
