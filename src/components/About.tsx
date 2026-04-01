@@ -1,4 +1,4 @@
-import { GraduationCap, Award, Heart, Lightbulb } from "lucide-react";
+﻿import { GraduationCap, Award, Heart, Lightbulb } from "lucide-react";
 import sketchup from "@/assets/sketchup-logo.png";
 import autocad from "@/assets/autocad-logo.png";
 import layout from "@/assets/layoutsketchup-logo.png";
@@ -8,139 +8,160 @@ import d5render from "@/assets/D5-logo.png";
 import enscape from "@/assets/enscape-logo.png";
 import Adobe from "@/assets/adobe-logo.png";
 import capcut from "@/assets/capcut-logo.svg";
-import appa from "@/assets/appa-logo.svg";
+
+const skills = [
+  { name: "AutoCAD",         logo: autocad   },
+  { name: "ArchiCAD",        logo: archicad  },
+  { name: "SketchUp",        logo: sketchup  },
+  { name: "Layout SketchUp", logo: layout    },
+  { name: "Canva",           logo: canva     },
+  { name: "Enscape",         logo: enscape   },
+  { name: "D5 Render",       logo: d5render  },
+  { name: "Adobe Photoshop", logo: Adobe     },
+  { name: "Capcut",          logo: capcut    },
+];
+
+const highlights = [
+  { icon: <GraduationCap size={28} />, title: "Education",   description: "Bachelor's in Interior Design, Institut Teknologi Nasional Bandung" },
+  { icon: <Award          size={28} />, title: "Excellence",  description: "Dedicated to pushing creative boundaries in every project" },
+  { icon: <Heart          size={28} />, title: "Passion",     description: "Transforming spaces into meaningful human experiences" },
+  { icon: <Lightbulb      size={28} />, title: "Innovation",  description: "Blending timeless principles with modern aesthetics" },
+];
 
 const About = () => {
-  const skills = [
-    {
-      name: "AutoCAD",
-      logo: autocad,
-    },
-    {
-      name: "ArchiCAD",
-      logo: archicad,
-    },
-    {
-      name: "SketchUp",
-      logo: sketchup,
-    },
-    {
-      name: "Layout SketchUp",
-      logo: layout,
-    },
-    {
-      name: "Canva",
-      logo: canva,
-    },
-    {
-      name: "Enscape",
-      logo: enscape,
-    },
-    {
-      name: "D5 Render",
-      logo: d5render,
-    },
-    {
-      name: "Adobe Photoshop",
-      logo: Adobe,
-    },
-    {
-      name: "Capcut",
-      logo: capcut,
-    },
-    // {
-    //   name: "Fall in love with Appa",
-    //   logo: appa,
-    // },
-  ];
-
-  const highlights = [
-    {
-      icon: <GraduationCap className="h-8 w-8" />,
-      title: "Education",
-      description: "Bachelor’s Degree in Interior Design, Institut Teknologi Nasional Bandung",
-    },
-    {
-      icon: <Award className="h-8 w-8" />,
-      title: "Excellence",
-      description: "Dedicated to pushing creative boundaries in every project",
-    },
-    {
-      icon: <Heart className="h-8 w-8" />,
-      title: "Passion",
-      description: "Transforming spaces into meaningful experiences",
-    },
-    {
-      icon: <Lightbulb className="h-8 w-8" />,
-      title: "Innovation",
-      description: "Blending timeless design principles with modern aesthetics",
-    },
-  ];
-
   return (
-    <section id="about" className="py-20 bg-soft-white">
-      <div className="container mx-auto px-6">
-        {/* Section Header */}
-        <div className="text-center mb-16 fade-in-up">
-          <h2 className="text-4xl lg:text-5xl font-playfair font-bold text-foreground mb-6">About Me</h2>
-          <div className="section-divider mb-8"></div>
-          <p className="text-xl text-muted-foreground font-inter max-w-3xl mx-auto leading-relaxed">
-            As an Interior Design student, I believe every space has a story to tell. My mission is to design environments that are not only visually
-            appealing but also improve the way people live, work, and connect.
+    <section id="about" style={{ padding: '6rem 0', background: '#adb0ba', position: 'relative', overflow: 'hidden' }}>
+
+      {/* Background accent — bottom right glow */}
+      <div style={{
+        position: 'absolute', bottom: '-10%', right: '-5%',
+        width: '40vw', height: '40vw',
+        background: 'radial-gradient(ellipse, rgba(99,0,0,0.12) 0%, transparent 70%)',
+        pointerEvents: 'none',
+      }} />
+
+      <div className="container mx-auto px-6" style={{ position: 'relative' }}>
+
+        {/* ── Section Header ─────────────────────────── */}
+        <div className="fade-in-up" style={{ textAlign: 'center', marginBottom: '4rem' }}>
+          <div className="tag" style={{ marginBottom: '1rem' }}>----------------</div>
+          <h2 style={{
+            fontFamily: "'Playfair Display', serif",
+            fontSize: 'clamp(2.25rem, 4vw, 3.25rem)',
+            fontWeight: 700,
+            color: '#ffffff',
+            marginBottom: '1.25rem',
+            letterSpacing: '-0.02em',
+          }}>
+            About Me{' '}
+            {/* <em style={{ color: '#3a020a', fontStyle: 'italic' }}>Shaping Lives</em> */}
+          </h2>
+          <div style={{ width: '48px', height: '2px', background: '#3a020a', margin: '0 auto 1.5rem' }} />
+          <p style={{
+            fontFamily: "'Inter', sans-serif",
+            fontSize: '1.05rem',
+            lineHeight: 1.8,
+            color: '#ffffff',
+            maxWidth: '680px',
+            margin: '0 auto',
+          }}>
+            As an Interior Design student, I believe every space has a story to tell. My mission is to
+            design environments that are not only visually compelling but also enrich the way people live.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left Content */}
-          <div className="slide-in-left space-y-8">
-            <div className="space-y-6">
-              <h3 className="text-3xl font-playfair font-semibold text-foreground">Design Philosophy</h3>
-              <p className="text-lg text-foreground font-inter leading-relaxed">
-                I approach each project with the understanding that great design arises from the seamless balance between form and function. I believe
-                that spaces should inspire, provide comfort, and enrich the human experience.
+        {/* ── Two-Column Layout ──────────────────────── */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', alignItems: 'start' }}>
+
+          {/* Left: Philosophy + Highlight Cards */}
+          <div className="slide-in-left">
+            <div style={{ marginBottom: '2.5rem' }}>
+              <h3 style={{
+                fontFamily: "'Playfair Display', serif",
+                fontSize: '1.75rem',
+                fontWeight: 600,
+                color: '#ffffff',
+                marginBottom: '1.25rem',
+              }}>
+                Design Philosophy
+              </h3>
+              <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '1rem', lineHeight: 1.85, color: '#ffffff', marginBottom: '1rem' }}>
+Passionate about designing harmonious environments that balance aesthetics and functionality, bringing ideas to life with thoughtful and impactful design.
               </p>
-              <p className="text-lg text-foreground font-inter leading-relaxed">
-                Through my studies at Institut Teknologi Nasional, I have gained a solid foundation in spatial relationships, sustainable design
-                practices, and the technical expertise required to transform creative ideas into reality.
+              <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '1rem', lineHeight: 1.85, color: '#ffffff' }}>
+As a creative individual, I am always eager to expand my knowledge and gain hands-on experience in the interior design field. I am deeply dedicated to contributing my skills wholeheartedly and remain steadfast in my commitment to growing within this industry.
               </p>
             </div>
 
-            {/* Highlights Grid */}
-            <div className="grid grid-cols-2 gap-6">
-              {highlights.map((item, index) => (
-                <div key={index} className="portfolio-card text-center group hover:bg-primary hover:text-primary-foreground">
-                  <div className="text-primary group-hover:text-primary-foreground mb-4 flex justify-center">{item.icon}</div>
-                  <h4 className="font-playfair font-semibold text-lg mb-2">{item.title}</h4>
-                  <p className="text-sm text-muted-foreground group-hover:text-primary-foreground/80">{item.description}</p>
+            {/* Highlight Grid */}
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+              {highlights.map((item, i) => (
+                <div key={i} className="portfolio-card" style={{ textAlign: 'center' }}>
+                  <div style={{ color: '#3a020a', marginBottom: '0.875rem', display: 'flex', justifyContent: 'center' }}>
+                    {item.icon}
+                  </div>
+                  <h4 style={{
+                    fontFamily: "'Playfair Display', serif",
+                    fontWeight: 600,
+                    fontSize: '1rem',
+                    color: '#ffffff',
+                    marginBottom: '0.5rem',
+                  }}>
+                    {item.title}
+                  </h4>
+                  <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '0.8rem', color: '#000000', lineHeight: 1.6 }}>
+                    {item.description}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Right Content - Skills */}
-          <div className="fade-in-up space-y-8">
-            <h3 className="text-3xl font-playfair font-semibold text-foreground">Technical Skills</h3>
-            <p className="text-lg text-muted-foreground font-inter">
-              Proficient in industry-standard design software, with a strong emphasis on precision and creative innovation.{" "}
+          {/* Right: Technical Skills */}
+          <div className="fade-in-up">
+            <h3 style={{
+              fontFamily: "'Playfair Display', serif",
+              fontSize: '1.75rem',
+              fontWeight: 600,
+              color: '#ffffff',
+              marginBottom: '0.75rem',
+            }}>
+              Technical Skills
+            </h3>
+            <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '1rem', lineHeight: 1.8, color: '#ffffff', marginBottom: '2rem' }}>
+              Proficient in industry-standard design software, with emphasis on precision and creative innovation.
             </p>
 
-            <div className="grid grid-cols-2 gap-6">
-              {skills.map((skill, index) => (
-                <div key={index} className="flex items-center space-x-4">
-                  <img src={skill.logo} alt={`${skill.name} logo`} className="h-8 w-8 flex-shrink-0 object-contain" loading="lazy" />
-                  <span className="font-inter font-medium text-foreground">{skill.name}</span>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0' }}>
+              {skills.map((skill, i) => (
+                <div
+                  key={i}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.875rem',
+                    padding: '0.875rem 1rem',
+                    borderBottom: '1px solid #8a8c96',
+                    borderRight: i % 2 === 0 ? '1px solid #8a8c96' : 'none',
+                    transition: 'background 0.25s',
+                    cursor: 'default',
+                  }}
+                  onMouseEnter={e => (e.currentTarget.style.background = 'rgba(99,0,0,0.1)')}
+                  onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
+                >
+                  <img
+                    src={skill.logo}
+                    alt={skill.name}
+                    style={{ width: '1.75rem', height: '1.75rem', objectFit: 'contain', flexShrink: 0, filter: 'brightness(0.9)' }}
+                  />
+                  <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '0.875rem', color: '#ffffff', fontWeight: 500 }}>
+                    {skill.name}
+                  </span>
                 </div>
               ))}
             </div>
-
-            {/* Quote */}
-            {/* <div className="bg-primary/5 p-6 rounded-xl border-l-4 border-primary">
-              <blockquote className="text-lg font-playfair italic text-foreground">
-                "my projects, A collection of projects highlighting design concepts, working drawings, and final renderings."
-              </blockquote>
-              <cite className="text-primary font-inter font-medium mt-2 block">- My Design Philosophy</cite>
-            </div> */}
           </div>
+
         </div>
       </div>
     </section>

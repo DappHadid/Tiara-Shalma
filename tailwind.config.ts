@@ -61,10 +61,18 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        'deep-red': "hsl(var(--deep-red))",
+        /* Strict 5-color palette tokens */
+        'maroon':      '#7A1E1E',
+        'maroon-dark': '#5a1616',
+        'color-black': '#121212',
+        'color-grey':  '#6E6E6E',
+        'soft-grey':   '#D1D1D1',
+        'off-white':   '#FAFAFA',
+        /* Legacy aliases for components that reference old tokens */
+        'deep-red':   "hsl(var(--deep-red))",
         'soft-white': "hsl(var(--soft-white))",
         'dark-brown': "hsl(var(--dark-brown))",
-        'crisp-white': "hsl(var(--crisp-white))",
+        'crisp-white':"hsl(var(--crisp-white))",
       },
       borderRadius: {
         lg: "var(--radius)",
