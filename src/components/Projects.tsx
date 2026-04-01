@@ -1,10 +1,12 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import { Eye } from "lucide-react";
 import { Link } from "react-router-dom";
 import residentialImage1 from "@/assets/DI1-3.png";
 import residentialImage2 from "@/assets/DI2-1.png";
 import fujifilmImage from "@/assets/FUJI.png";
 import spaImage from "@/assets/SC-6.png";
+import publicInteriorCover from "@/assets/PublicDesignInterior/Lobby Main Hall Area.png";
+import saranaDudukCover from "@/assets/SaranaDuduk/Image.png";
 
 const projectCategories = [
   {
@@ -46,6 +48,26 @@ const projectCategories = [
     perspectives: 6,
     image: spaImage,
     details: "Lingkungan spa dan ritel yang tenang menggabungkan ritel aromaterapi dengan ruang perawatan kesehatan — menampilkan bahan-bahan alami, pencahayaan lembut, dan elemen desain yang terinspirasi dari zen.",
+  },
+  {
+    id: "public-interior",
+    label: "05",
+    title: "Desain Interior Publik",
+    description: "Desain interior publik — ruang lobi, dining, dan area komersial",
+    workingDrawings: 0,
+    perspectives: 11,
+    image: publicInteriorCover,
+    details: "Proyek desain interior publik yang mencakup berbagai area komersial — mulai dari lobi utama yang megah, area dining yang elegan, private dining room, lounge bar, hingga area resepsionis. Setiap ruang dirancang untuk menciptakan pengalaman yang berkesan bagi pengunjung.",
+  },
+  {
+    id: "sarana-duduk",
+    label: "06",
+    title: "Sarana Duduk",
+    description: "Eksplorasi desain sarana duduk — furnitur dan konsep tempat duduk",
+    workingDrawings: 0,
+    perspectives: 6,
+    image: saranaDudukCover,
+    details: "Proyek eksplorasi desain sarana duduk yang menggabungkan prinsip ergonomi, estetika, dan fungsionalitas. Mencakup proses kreatif dari konsep hingga visualisasi akhir — menghadirkan desain furnitur tempat duduk yang inovatif dan nyaman.",
   },
 ];
 
@@ -102,8 +124,8 @@ const Projects = () => {
         }}>
           {[
             { num: '7',  label: 'Working Drawings'   },
-            { num: '26', label: 'Perspective Renders' },
-            { num: '4',  label: 'Projects'     },
+            { num: '43', label: 'Perspective Renders' },
+            { num: '6',  label: 'Projects'            },
             { num: '9',  label: 'Software Tools'      },
           ].map(stat => (
             <div
@@ -239,15 +261,19 @@ const ProjectRow = ({ project, index }: { project: typeof projectCategories[0]; 
         </div>
 
         <div style={{ display: 'flex', gap: '1.5rem' }}>
-          <div>
-            <span style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.5rem', fontWeight: 700, color: '#3a020a' }}>
-              {project.workingDrawings}
-            </span>
-            <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '0.75rem', color: '#000000', marginLeft: '0.4rem', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
-              Gambar Kerja{project.workingDrawings > 1 ? 's' : ''}
-            </span>
-          </div>
-          <div style={{ width: '1px', background: '#8a8c96' }} />
+          {project.workingDrawings > 0 && (
+            <>
+              <div>
+                <span style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.5rem', fontWeight: 700, color: '#3a020a' }}>
+                  {project.workingDrawings}
+                </span>
+                <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '0.75rem', color: '#000000', marginLeft: '0.4rem', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                  Gambar Kerja{project.workingDrawings > 1 ? 's' : ''}
+                </span>
+              </div>
+              <div style={{ width: '1px', background: '#8a8c96' }} />
+            </>
+          )}
           <div>
             <span style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.5rem', fontWeight: 700, color: '#3a020a' }}>
               {project.perspectives}

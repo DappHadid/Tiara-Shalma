@@ -2,23 +2,23 @@
 import sketchup from "@/assets/sketchup-logo.png";
 import autocad from "@/assets/autocad-logo.png";
 import layout from "@/assets/layoutsketchup-logo.png";
-import canva from "@/assets/canva-logo.jpeg";
+// import canva from "@/assets/canva-logo.jpeg";
 import archicad from "@/assets/archicad-logo.png";
 import d5render from "@/assets/D5-logo.png";
 import enscape from "@/assets/enscape-logo.png";
-import Adobe from "@/assets/adobe-logo.png";
-import capcut from "@/assets/capcut-logo.svg";
+// import Adobe from "@/assets/adobe-logo.png";
+// import capcut from "@/assets/capcut-logo.svg";
 
 const skills = [
   { name: "AutoCAD",         logo: autocad   },
   { name: "ArchiCAD",        logo: archicad  },
   { name: "SketchUp",        logo: sketchup  },
   { name: "Layout SketchUp", logo: layout    },
-  { name: "Canva",           logo: canva     },
+  // { name: "Canva",           logo: canva     },
   { name: "Enscape",         logo: enscape   },
   { name: "D5 Render",       logo: d5render  },
-  { name: "Adobe Photoshop", logo: Adobe     },
-  { name: "Capcut",          logo: capcut    },
+  // { name: "Adobe Photoshop", logo: Adobe     },
+  // { name: "Capcut",          logo: capcut    },
 ];
 
 const highlights = [

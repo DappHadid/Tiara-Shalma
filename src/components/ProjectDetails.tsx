@@ -1,4 +1,4 @@
-﻿import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Layout from "@/components/Layouts";
 import { X } from "lucide-react";
@@ -35,6 +35,27 @@ import SC5  from "@/assets/SC-5.png";
 import SC6  from "@/assets/SC-6.png";
 import SC7  from "@/assets/SC-7.png";
 import SC8  from "@/assets/SC-8.png";
+
+// Public Interior Design
+import PDI_lobby    from "@/assets/PublicDesignInterior/Lobby Main Hall Area.png";
+import PDI_lobby2   from "@/assets/PublicDesignInterior/Lobby Main Hall Area 2.png";
+import PDI_lobby3   from "@/assets/PublicDesignInterior/Lobby Main Hall Area 3.png";
+import PDI_dining   from "@/assets/PublicDesignInterior/Dining Area.png";
+import PDI_dining1  from "@/assets/PublicDesignInterior/Dining Area(1).png";
+import PDI_dining2  from "@/assets/PublicDesignInterior/Dining Area(2).png";
+import PDI_dining2b from "@/assets/PublicDesignInterior/Dining Area 2.png";
+import PDI_dining3  from "@/assets/PublicDesignInterior/Dining Area 3.png";
+import PDI_lounge   from "@/assets/PublicDesignInterior/Lounge Bar .png";
+import PDI_private  from "@/assets/PublicDesignInterior/Private Dining Room.png";
+import PDI_recept   from "@/assets/PublicDesignInterior/Receptionist .png";
+
+// Sarana Duduk
+import SD_img1 from "@/assets/SaranaDuduk/Image.png";
+import SD_img2 from "@/assets/SaranaDuduk/Image_1.png";
+import SD_img3 from "@/assets/SaranaDuduk/Image_2.png";
+import SD_dsc1 from "@/assets/SaranaDuduk/DSC08129.JPG";
+import SD_dsc2 from "@/assets/SaranaDuduk/DSC08131.JPG";
+import SD_dsc3 from "@/assets/SaranaDuduk/DSC08137.JPG";
 
 const projectDetails: Record<string, {
   title: string;
@@ -100,6 +121,39 @@ const projectDetails: Record<string, {
       { src: SC2, label: "FL1. Area Cermin Selfie"  },
       { src: SC3, label: "FL1. Area Display"        },
       { src: SC1, label: "FL2. Area Spa"            },
+    ],
+  },
+
+  "public-interior": {
+    title: "Public Interior Design",
+    description: "Proyek desain interior publik yang mencakup berbagai area komersial — mulai dari lobi utama yang megah, area dining yang elegan, private dining room, lounge bar, hingga area resepsionis. Setiap ruang dirancang dengan cermat untuk menciptakan pengalaman yang berkesan bagi pengunjung, menghadirkan nuansa modern yang hangat dan representatif.",
+    working: [],
+    perspective: [
+      { src: PDI_lobby,    label: "Lobby Main Hall Area"    },
+      { src: PDI_lobby2,   label: "Lobby Main Hall Area 2"  },
+      { src: PDI_lobby3,   label: "Lobby Main Hall Area 3"  },
+      { src: PDI_recept,   label: "Receptionist Area"       },
+      { src: PDI_dining,   label: "Dining Area"             },
+      { src: PDI_dining1,  label: "Dining Area – View 1"    },
+      { src: PDI_dining2,  label: "Dining Area – View 2"    },
+      { src: PDI_dining2b, label: "Dining Area – View 3"    },
+      { src: PDI_dining3,  label: "Dining Area – View 4"    },
+      { src: PDI_private,  label: "Private Dining Room"     },
+      { src: PDI_lounge,   label: "Lounge Bar"              },
+    ],
+  },
+
+  "sarana-duduk": {
+    title: "Sarana Duduk",
+    description: "Proyek eksplorasi desain sarana duduk yang menggabungkan prinsip ergonomi, estetika, dan fungsionalitas. Mencakup proses kreatif dari konsep hingga visualisasi akhir — menghadirkan desain furnitur tempat duduk yang inovatif dan nyaman.",
+    working: [],
+    perspective: [
+      { src: SD_img1, label: "Desain Render – View 1"   },
+      { src: SD_img2, label: "Desain Render – View 2"   },
+      { src: SD_img3, label: "Desain Render – View 3"   },
+      { src: SD_dsc1, label: "Dokumentasi Foto – 1"      },
+      { src: SD_dsc2, label: "Dokumentasi Foto – 2"      },
+      { src: SD_dsc3, label: "Dokumentasi Foto – 3"      },
     ],
   },
 };
@@ -252,15 +306,17 @@ const ProjectDetails = () => {
             </p>
           </div>
 
-          {/* Architectural Drawings */}
-          <div style={{ marginBottom: '4rem' }}>
-            <SectionHeading>Gambar Kerja</SectionHeading>
-            <div style={gridStyle}>
-              {project.working.map((img, idx) => (
-                <ImageCard key={idx} img={img} onClick={() => openLightbox(img.src, img.label)} />
-              ))}
+          {/* Architectural Drawings — only shown when present */}
+          {project.working.length > 0 && (
+            <div style={{ marginBottom: '4rem' }}>
+              <SectionHeading>Gambar Kerja</SectionHeading>
+              <div style={gridStyle}>
+                {project.working.map((img, idx) => (
+                  <ImageCard key={idx} img={img} onClick={() => openLightbox(img.src, img.label)} />
+                ))}
+              </div>
             </div>
-          </div>
+          )}
 
           {/* Perspective Drawings */}
           <div>
